@@ -1,0 +1,28 @@
+[project]
+name = "streamlit-rag-app"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "y-mae-dev", email = "youyiqianye061@gmail.com" }
+]
+dependencies = [
+    "boto3>=1.35.90",
+    "streamlit>=1.41.1",
+    "python-dotenv>=1.0.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/streamlit_rag_app"]
