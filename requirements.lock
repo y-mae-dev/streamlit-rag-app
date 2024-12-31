@@ -22,6 +22,7 @@ boto3==1.35.90
 botocore==1.35.90
     # via boto3
     # via s3transfer
+    # via streamlit-rag-app
 cachetools==5.5.0
     # via streamlit
 certifi==2024.12.14
@@ -65,6 +66,7 @@ pandas==2.2.3
     # via streamlit
 pillow==11.0.0
     # via streamlit
+    # via streamlit-rag-app
 protobuf==5.29.2
     # via streamlit
 pyarrow==18.1.0
@@ -73,6 +75,8 @@ pydeck==0.9.1
     # via streamlit
 pygments==2.18.0
     # via rich
+pymupdf==1.25.1
+    # via streamlit-rag-app
 python-dateutil==2.9.0.post0
     # via botocore
     # via pandas
