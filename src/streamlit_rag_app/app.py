@@ -357,6 +357,8 @@ elif selected_tab == "multi_modal":
                     st.error(f"ファイル処理中にエラーが発生しました: {e}")
     elif uploaded_file and not question:
         # ファイルがアップロードされているが質問が入力されていない場合
+        st.info("質問を入力してください。")
+    elif question and not uploaded_file:
         # 質問が入力されているがファイルがアップロードされていない場合
         # 入力メッセージをセッションに追加
         input_msg = {"role": "user", "content": [{"text": question}]}
@@ -384,9 +386,6 @@ elif selected_tab == "multi_modal":
                 st.markdown(response_content)
         except Exception as e:
             st.error(f"エラーが発生しました: {e}")
-    elif question and not uploaded_file:
-        # 質問が入力されているがファイルがアップロードされていない場合
-        st.info("ファイルをアップロードしてください。")
     else:
         # 両方が未入力の場合
         st.info("ファイルをアップロードし、質問を入力してください。")
